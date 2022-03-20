@@ -12,6 +12,8 @@ var guessCounter = 0;
 var clueHoldTime = 1000; //how long to hold each clue's light/sound
 var length = 10;
 var mistakes = 0;
+var song = new Audio("https://cdn.glitch.global/45395057-1072-4534-8ee0-4f5500a78bad/record-online-voice-recorder_kIwejRI.mp3?v=1647789162851");
+var end = new Audio("https://cdn.glitch.global/45395057-1072-4534-8ee0-4f5500a78bad/amongus-death.mp3?v=1647791467250");
 
 function getRandomInt(max) {
  return Math.floor(Math.random() * Math.floor(max) + 1); // + 1 so we don't get 0
@@ -19,6 +21,7 @@ function getRandomInt(max) {
 
 function startGame(){
   //initialize game variables
+  document.getElementById("sus song").play();
   mistakes = 0;
   pattern = [];
   for (var i =0; i < length; i ++) {
@@ -72,6 +75,7 @@ function playClueSequence(){
 function loseGame(){
   if (mistakes == 3) {
     stopGame();
+    document.getElementById("end").play();
     alert("Looks like you're tonights big loser!");
   }
 }
