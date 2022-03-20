@@ -1,17 +1,24 @@
+
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
-  background-color: slategrey;
-  color: white;
+  background-image: Url(https://cdn.discordapp.com/attachments/178958777968492544/955133897258184704/Among-Us.jpg);
+  background-size: cover;
+  color: red;
 }
 
 h1 {
   font-family: helvetica, arial, sans-serif;
+  font-size: 80px;
 }
 
 button {
   padding: 20px;
   border-radius: 10px;
+}
+
+.wrapper {
+  text-align: center;
 }
 
 #button1 {
