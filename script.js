@@ -3,7 +3,7 @@ const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 //Global Variables
-var pattern = [];//Array.from({length: 10}, () => Math.floor(Math.random() * 6));;
+var pattern = [];
 var progress = 0; 
 var gamePlaying = false;
 var tonePlaying = false;
@@ -20,9 +20,9 @@ function getRandomInt(max) {
 function startGame(){
   //initialize game variables
   mistakes = 0;
-  pattern = []; // reset so array doesn't get longer then 5 if we restart game
+  pattern = [];
   for (var i =0; i < length; i ++) {
-    pattern.push(getRandomInt(5));
+    pattern.push(getRandomInt(6));
   }
   console.log('pattern: ' + pattern);
   progress = 0;
@@ -70,7 +70,7 @@ function playClueSequence(){
 }
 
 function loseGame(){
-  if (mistakes == 2) {
+  if (mistakes == 3) {
     stopGame();
     alert("Looks like you're tonights big loser!");
   }
