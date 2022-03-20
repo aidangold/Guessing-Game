@@ -1,18 +1,30 @@
 // global constants
-const clueHoldTime = 1000; //how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 //Global Variables
-var pattern = [4, 1, 4, 2, 2, 1, 3, 4];
+var pattern = [];//Array.from({length: 10}, () => Math.floor(Math.random() * 6));;
 var progress = 0; 
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5;  //must be between 0.0 and 1.0
 var guessCounter = 0;
+var clueHoldTime = 1000; //how long to hold each clue's light/sound
+var length = 10;
+var mistakes = 0;
+
+function getRandomInt(max) {
+ return Math.floor(Math.random() * Math.floor(max) + 1); // + 1 so we don't get 0
+}
 
 function startGame(){
   //initialize game variables
+  mistakes = 0;
+  pattern = []; // reset so array doesn't get longer then 5 if we restart game
+  for (var i =0; i < length; i ++) {
+    pattern.push(getRandomInt(5));
+  }
+  console.log('pattern: ' + pattern);
   progress = 0;
   gamePlaying = true;
   // swap the Start and Stop buttons
@@ -51,19 +63,22 @@ function playClueSequence(){
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
     setTimeout(playSingleClue,delay,pattern[i])
     // set a timeout to play that clue
-    delay += clueHoldTime 
+    clueHoldTime = clueHoldTime - 8
+    delay += clueHoldTime
     delay += cluePauseTime;
   }
 }
 
 function loseGame(){
-  stopGame();
-  alert("Game Over. You lost.");
+  if (mistakes == 2) {
+    stopGame();
+    alert("Looks like you're tonights big loser!");
+  }
 }
 
 function winGame(){
   stopGame();
-  alert("Game Over. You Won!");
+  alert("Congratulations, you won!");
 }
 
   
@@ -90,16 +105,20 @@ function guess(btn){
       guessCounter++;
     }
   }else{
+    mistakes++;
     loseGame();
   }
 }
 
 // Sound Synthesis Functions
 const freqMap = {
-  1: 261.6,
-  2: 329.6,
-  3: 392,
-  4: 466.2
+  1: 200,
+  2: 440,
+  3: 523.25,
+  4: 587.33,
+  5: 622.25,
+  6: 698.46,
+  7: 739.99
 }
 
 function playTone(btn,len){ 

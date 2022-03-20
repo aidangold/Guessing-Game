@@ -19,7 +19,8 @@ button {
 }
 
 #button1:active, #button1.lit {
-    background:green;
+    background-image: Url(https://cdn.discordapp.com/attachments/178958777968492544/954842665642524706/Green-Among-us-PNG-Transparent.png);
+    background-size: cover;
 }
 
 #button2 {
@@ -27,7 +28,8 @@ button {
 }
 
 #button2:active, #button2.lit {
-  background: blue;
+  background-image: Url(https://cdn.discordapp.com/attachments/178958777968492544/954841425516826654/Blue-Among-us-PNG-Transparent.png);
+  background-size: cover;
 }
 
 #button3 {
@@ -35,7 +37,8 @@ button {
 }
 
 #button3:active, #button3.lit{
-  background: red;
+  background-image: Url(https://cdn.discordapp.com/attachments/178958777968492544/954843673928019978/Red-Among-us-PNG-Transparent.png);
+  background-size: cover;
 }
 
 #button4 {
@@ -43,7 +46,26 @@ button {
 }
 
 #button4:active, #button4.lit {
-  background: yellow;
+  background-image: Url(https://cdn.discordapp.com/attachments/178958777968492544/954841945413410886/794eae170aa47f1f3aa843f135ee06ab.png);
+  background-size: cover;
+}
+
+#button5 {
+  background: #CBC3E3;
+}
+
+#button5:active, #button5.lit {
+  background-image: Url(https://cdn.discordapp.com/attachments/178958777968492544/954842361547075604/9kvk25sh2sn51.png);
+  background-size: cover;
+}
+
+#button6 {
+  background: #FFD580;
+}
+
+#button6:active, #button6.lit {
+  background-image: Url(https://cdn.discordapp.com/attachments/178958777968492544/954841569654095982/ee0b8322db7fb7939469a67e889318d4.png);
+  background-size: cover;
 }
 
 .hidden {
