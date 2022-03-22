@@ -12,8 +12,6 @@ var guessCounter = 0;
 var clueHoldTime = 1000; //how long to hold each clue's light/sound
 var length = 10;
 var mistakes = 0;
-var song = new Audio("https://cdn.glitch.global/45395057-1072-4534-8ee0-4f5500a78bad/record-online-voice-recorder_kIwejRI.mp3?v=1647789162851");
-var end = new Audio("https://cdn.glitch.global/45395057-1072-4534-8ee0-4f5500a78bad/amongus-death.mp3?v=1647791467250");
 
 function getRandomInt(max) {
  return Math.floor(Math.random() * Math.floor(max) + 1); // + 1 so we don't get 0
@@ -66,7 +64,7 @@ function playClueSequence(){
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
     setTimeout(playSingleClue,delay,pattern[i])
     // set a timeout to play that clue
-    clueHoldTime = clueHoldTime - 8
+    clueHoldTime = clueHoldTime - 10
     delay += clueHoldTime
     delay += cluePauseTime;
   }
@@ -81,6 +79,7 @@ function loseGame(){
 }
 
 function winGame(){
+  document.getElementById("win").play();
   stopGame();
   alert("Congratulations, you won!");
 }
