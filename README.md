@@ -38,7 +38,6 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough (GIF)
 
-If you recorded multiple GIFs for all the implemented features, you can add them here:
 ![](https://github.com/aidangold/Guessing-Game/blob/main/sussy_says.gif)
 
 ## Reflection Questions
