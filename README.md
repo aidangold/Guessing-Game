@@ -62,7 +62,7 @@ https://stackoverflow.com/questions (for simple JS formatting)
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://drive.google.com/file/d/19LoqET0c5ZPTHWZZmQy5TpVXQzbAiK_Q/view?usp=sharing)
 
 
 ## License
