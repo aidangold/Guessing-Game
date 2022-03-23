@@ -4,7 +4,7 @@
 
 Submitted by: **Aidan Goldstein**
 
-Time spent: **10** hours spent in total
+Time spent: **8** hours spent in total
 
 Link to project: https://prickly-swamp-rhodium.glitch.me/
 
